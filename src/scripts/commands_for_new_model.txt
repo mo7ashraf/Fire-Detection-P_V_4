@@ -1,0 +1,18 @@
+
+pip install ultralytics
+python scripts/prepare_combined_dataset.py
+python scripts/train_yolov10n_combined.py
+python scripts/visualize_labels.py
+-----------------------------------------
+python prepare_combined_dataset_new.py
+python clean_labels_new.py
+python validate_labels_new.py
+       # must say all OK
+python visualize_labels_new.py      # check some images manually
+python train_yolov10n_combined_new.py
+
+
+To resume model traninning 
+yolo detect train resume="../../runs/detect/exp_y10n_combined3/weights/last.pt" 
+or
+yolo detect train resume=True project="../../runs/detect" name="exp_y10n_combined3"

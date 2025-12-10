@@ -1,0 +1,5 @@
+train: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V3_1_Code\dataset\pyro_sdis_yolo\images\train
+val: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V3_1_Code\dataset\pyro_sdis_yolo\images\val
+names:
+  0: smoke
+  1: fire

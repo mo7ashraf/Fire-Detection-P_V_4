@@ -1,0 +1,25 @@
+* yolo detect train model=yolov10n.pt data=configs/dataset.yaml  imgsz=512 epochs=50 batch=4 workers=0 name=exp_y10n_t1000_stable  amp=False mosaic=0.0 mixup=0.0 
+* python src\run_eval_export.py --run runs\detect\exp_y10n_t1000_stable7 --out out_y10n
+python src\run_eval_export.py --run runs\detect\exp_y10n_t1000_stable7 --out out_y10n                                                                    
+[✓] Wrote out_y10n {'precision': 0.62996, 'recall': 0.62058, 'mAP50': 0.622, 'mAP50-95': 0.3531, 'columns_seen': ['epoch', 'train/box_loss', 'train/cls_loss', 'train/dfl_loss', 'metrics/precision(B)', 'metrics/recall(B)', 'metrics/mAP50(B)', 'metrics/mAP50-95(B)', 'val/box_loss', 'val/cls_loss', 'val/dfl_loss', 'lr/pg0', 'lr/pg1', 'lr/pg2']}
+(venv_fire_detect) PS D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V3_1_Code>
+========================================
+* python src\export_onnx.py --weights runs\detect\exp_y10n_t1000_stable7\weights\best.pt --img 512 --out models\best.onnx
+python src\export_onnx.py --weights runs\detect\exp_y10n_t1000_stable7\weights\best.pt --img 512 --out models\best.onnxr\Paper V3_1\FireDetect_Pro_Suite_
+>> 50904_1102\Paper_V3_1_Code>
+Ultralytics 8.3.0 🚀 Python-3.10.18 torch-2.3.1+cu121 CUDA:0 (Quadro T1000 with Max-Q Design, 4096MiB)
+YOLOv10n summary (fused): 285 layers, 2,695,196 parameters, 0 gradients, 8.2 GFLOPs
+
+PyTorch: starting from 'runs\detect\exp_y10n_t1000_stable7\weights\best.pt' with input shape (1, 3, 512, 512) BCHW and output shape(s) (1, 300, 6) (5.5 MB)
+
+ONNX: starting export with onnx 1.16.1 opset 13...
+ONNX: slimming with onnxslim 0.1.34...
+ONNX: export success ✅ 2.3s, saved as 'runs\detect\exp_y10n_t1000_stable7\weights\best.onnx' (8.8 MB)
+
+Export complete (3.4s)
+Results saved to D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V3_1_Code\runs\detect\exp_y10n_t1000_stable7\weights
+Predict:         yolo predict task=detect model=runs\detect\exp_y10n_t1000_stable7\weights\best.onnx imgsz=512
+Validate:        yolo val task=detect model=runs\detect\exp_y10n_t1000_stable7\weights\best.onnx imgsz=512 data=configs/dataset.yaml
+Visualize:       https://netron.app
+(venv_fire_detect) PS D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V3_1_Code>
+==========================================
