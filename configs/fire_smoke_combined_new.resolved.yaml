@@ -1,6 +1,6 @@
-train: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V4_Code\dataset\fire_smoke_combined\images\train
-val: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V4_Code\dataset\fire_smoke_combined\images\val
-test: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V4_Code\dataset\fire_smoke_combined\images\test
+train: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V4_Code\dataset\fire_smoke_combined_new\images\train
+val: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V4_Code\dataset\fire_smoke_combined_new\images\val
+test: D:\Master\Updated Work\Proposed Paper\Paper V3_1\FireDetect_Pro_Suite_20250904_1102\Paper_V4_Code\dataset\fire_smoke_combined_new\images\test
 names:
   0: fire
   1: smoke

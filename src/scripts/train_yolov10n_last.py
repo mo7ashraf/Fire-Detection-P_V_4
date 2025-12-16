@@ -57,7 +57,7 @@ def main() -> None:
     ap.add_argument("--epochs", type=int, default=100)
     ap.add_argument("--batch", type=int, default=8)
     ap.add_argument("--workers", type=int, default=2)
-    ap.add_argument("--name", default="exp_y10n_combined")
+    ap.add_argument("--name", default="exp_y10n_combined5")
     a = ap.parse_args()
 
     data_cfg = _resolve_dataset_yaml_to_file(a.data)

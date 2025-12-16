@@ -9,7 +9,8 @@ python clean_labels_new.py
 python validate_labels_new.py
        # must say all OK
 python visualize_labels_new.py      # check some images manually
-python train_yolov10n_combined_new.py
+
+python src/scripts/train_yolov10n_last.py
 
 
 To resume model traninning 

@@ -1,0 +1,20 @@
+python src/scripts/build_effnet_dataset_from_yaml.py
+python src/scripts/train_effnet_b0_verifier.py
+
+------------------old-------------
+python src/scripts/build_effnet_dataset_from_yaml.py ^
+  --data ../../configs/fire_smoke_combined_new.yaml ^
+  --yolo_weights path/to/best.pt ^
+  --out_dir data_effnet ^
+  --conf_pred 0.20 ^
+  --bg_random_per_image 2 ^
+  --max_hardneg_per_image 3
+
+--------------------------------------------------
+
+python src/scripts/train_effnet_b0_verifier.py ^
+  --data_dir data_effnet ^
+  --out_dir runs/effnet_verifier ^
+  --epochs 30 ^
+  --batch_size 64 ^
+  --use_amp

@@ -12,12 +12,18 @@ data/download/
 data\download\
 data/D-Fire.zip
 data\D-Fire.zip
+dataset/fire_smoke_combined_new.zip
+dataset\fire_smoke_combined_new.zip
 dataset/dfire/
 dataset\dfire\
 dataset/fire_smoke_combined/
 dataset\fire_smoke_combined\
 dataset/fire_smoke_combined_new/
 dataset\fire_smoke_combined_new\
+
+runs\detect\data_effnet\
+runs/detect/data_effnet/
+
 
 # Ignore Python cache and environment files
 __pycache__/
